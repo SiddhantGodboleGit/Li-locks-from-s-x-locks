@@ -3,8 +3,8 @@ Implementing Layered Locks For A Commutativity Table In Layered Locking using ex
 ## Overview :
 - Each Lock is an array of N (No. of operations)(columns in table) basic r/w locks.
 - When Locking an item(i) for an operation(A)
-   in i's lock array for column B (Operation B).
-  + When A == B
-    * For - on B get **Shared** lock on i's B.
-    * For + on B get **NO** lock on i's B.
+   + For every column/operation B in i's array :
+     + When A == B
+       * For - on B get **Shared** lock on i's B.
+       * For + on B get **NO** lock on i's B.
 * 
