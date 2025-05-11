@@ -7,6 +7,9 @@ Implementing Layered Locks For A Commutativity Table In Layered Locking using ex
      + When A != B
        - For **-** on B get **Shared** lock on i's B.
        - For **+** on B get **NO** lock on i's B.
-     + When A == B get a **Exclusive** lock on A.
+     + When A == B get a **Exclusive** lock on i's A.
        - For **+** on A release A **after** acquiring all required locks.
        - For **-** on A keep **Exclusive** lock.
+      
+> [!NOTE]
+> For non-symmetric with A-A commutavity table have another 
