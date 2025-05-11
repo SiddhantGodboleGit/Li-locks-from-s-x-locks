@@ -2,7 +2,7 @@
 Implementing Layered Locks For A Commutativity Table In Layered Locking using exclusive(write) and shared(read) locks.
 ## Overview :
 - Each Lock is an array of N (No. of operations)(columns in table) basic r/w locks.
-- When Locking an item(i) for an operation(A)
+### When Locking an item(i) for an operation(A)
    - For every column/operation B in i's array :
      + When A != B
        - For **-** on B get **Shared** lock on i's B.
