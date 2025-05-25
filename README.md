@@ -12,4 +12,4 @@ Implementing Layered Locks For A Commutativity Table In Layered Locking using ex
        - For **-** on A keep **Exclusive** lock.
       
 > [!NOTE]
-> For non-symmetric table with A-A commutavity have another 
+> For non-symmetric table with A-A commutavity an additional fix is required.
