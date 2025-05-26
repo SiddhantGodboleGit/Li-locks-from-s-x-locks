@@ -19,7 +19,7 @@ Implementing Locks For A Commutativity Table In Layered Locking using exclusive(
       - On others 
          - non-commutvity is a **read** lock, nothing otherwise.
       - On self 
-         - always **write** lock, on commutavity release it after acquiring all.
+         - always **write** lock; on commutavity release it after acquiring all.
       
 > [!NOTE]
 > - Array acquisition in ascending while release in decending order of index. 
