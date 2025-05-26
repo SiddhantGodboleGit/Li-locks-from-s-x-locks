@@ -11,13 +11,14 @@ Implementing Layered Locks For A Commutativity Table In Layered Locking using ex
      - When A == B get a **Exclusive** lock on i's A.
        - For **+** on A release A **after** acquiring all required locks.
        - For **-** on A keep **Exclusive** lock.
+         
 
    - In other words, for array do :
    
       - On others 
          - non-commutvity is a **read** lock, nothing otherwise.
       - On self 
-         - always write, on commutavity release after acquiring all.
+         - always **write** lock, on commutavity release after acquiring all.
       
 > [!NOTE]
 > For non-symmetric table with A-A commutavity an additional fix is required.
