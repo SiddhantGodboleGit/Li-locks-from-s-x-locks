@@ -18,7 +18,7 @@ Implementing Layered Locks For A Commutativity Table In Layered Locking using ex
       - On others 
          - non-commutvity is a **read** lock, nothing otherwise.
       - On self 
-         - always **write** lock, on commutavity release after acquiring all.
+         - always **write** lock, on commutavity release it after acquiring all.
       
 > [!NOTE]
 > For non-symmetric table with A-A commutavity an additional fix is required.
