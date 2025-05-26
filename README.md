@@ -5,6 +5,7 @@ Implementing Layered Locks For A Commutativity Table In Layered Locking using ex
 ### When Locking an item(i) for an operation A
 
    For every column/operation B in i's array :
+   
      - When A != B
        - For **-** on B get **Shared** lock on i's B.
        - For **+** on B get **NO** lock on i's B.
@@ -13,6 +14,7 @@ Implementing Layered Locks For A Commutativity Table In Layered Locking using ex
        - For **-** on A keep **Exclusive** lock.
 
    In other words, for array do :
+   
       - On others 
          - non-commutvity is a **read** lock, nothing otherwise.
       - On self 
