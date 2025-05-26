@@ -1,7 +1,7 @@
 # L<sub>i</sub> locks from shared and exclusive locks
 Implementing Locks For A Commutativity Table In Layered Locking using exclusive(write) and shared(read) locks.
 ## Overview :
-- Goal is to implement a Lock system for a Specific Commutavity table **without a manager or busy-waiting**.
+- Goal is to implement a Lock system for a specific Commutavity table **without a manager or busy-waiting**.
 - Each Lock is an **array of N (No. of operations)(columns in table) basic r/w locks**.
 ### When Locking an item(i) for an operation A
 
