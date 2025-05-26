@@ -22,5 +22,5 @@ Implementing Locks For A Commutativity Table In Layered Locking using exclusive(
          - always **write** lock, on commutavity release it after acquiring all.
       
 > [!NOTE]
-> Array acquisition in ascending while release in decending order of index. 
-> For non-symmetric table with A-A commutavity an additional fix is required.
+> - Array acquisition in ascending while release in decending order of index. 
+> - For non-symmetric table with A-A commutavity an additional fix is required.
