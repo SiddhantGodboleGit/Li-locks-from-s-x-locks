@@ -36,4 +36,4 @@ Each Lock is an **array of N (No. of operations)(columns in table) basic r/w loc
   | **R** | + | - | 
   | **W** | - | - |
   + **R+R** : obtaining and release of exclusive lock without issue |
-  + **R-W** : R has read on W so 
+  + **R-W** : R has read on W ; W gets read on R but has to wait on write on W |
