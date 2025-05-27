@@ -12,7 +12,7 @@ Each Lock is an **array of N (No. of operations)(columns in table) basic r/w loc
      - When A != B
        - For **-** on B get **read** on i's B.
        - For **+** on B get **NO** lock on i's B.
-     - When A == B get a **Exclusive** lock on i's A.
+     - When A == B get a **write** lock on i's A.
        - For **+** on A release A **after** acquiring all required locks.
        - For **-** on A keep **write**.
          
