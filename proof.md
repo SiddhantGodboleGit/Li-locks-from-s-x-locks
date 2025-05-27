@@ -21,10 +21,11 @@ Each Lock is an **array of N (No. of operations)(columns in table) basic r/w loc
 
 ### Proof by Induction
 - For single operation
-  | A | correctness |
-  | :--: | --: |
-  | - | works like basic write with similar unlock |
-  | + | obtaining and release of write without issue |
+  | A | 
+  | :--: |
+  | -/+ |
+  + **A+** : works like basic write with similar unlock
+  + **A-** : obtaining and release of write without issue
   
 - For two operations
   | | R | W |
