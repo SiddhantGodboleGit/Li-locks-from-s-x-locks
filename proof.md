@@ -18,6 +18,7 @@ Each Lock is an **array of N (No. of operations)(columns in table) basic r/w loc
 ### Proof by Induction
 - For single operation
   | A | correctness |
-  | -- | -- |
-  | -  | works like basic exclusive lock |
+  | :--: | --: |
+  | - | works like basic exclusive lock with similar unlock |
+  | + | obtaining and release of exclusive lock without issue |
   
