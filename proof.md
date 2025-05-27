@@ -15,15 +15,19 @@ Each Lock is an **array of N (No. of operations)(columns in table) basic r/w loc
 > - Array acquisition in ascending while release in decending order of index. 
 > - For non-symmetric table with A-A commutavity an additional fix is required.
 
+`write` - `exclusive lock`
+`read`  - `shared lock`
 ### Proof by Induction
 - For single operation
   | A | correctness |
   | :--: | --: |
-  | - | works like basic exclusive lock with similar unlock |
-  | + | obtaining and release of exclusive lock without issue |
+  | - | works like basic write with similar unlock |
+  | + | obtaining and release of write without issue |
   
 - For two operations
   | | R | W |
   | :--: | :--: | :--: |
   | **R** | + | - | 
   | **W** | - | - |
+  + **R+R** : obtaining and release of exclusive lock without issue |
+  + **R-W** : R has read 
