@@ -45,12 +45,12 @@ Looking at symmetric tables.
   + **W-W** : W has write on itself
 
 - For any new operation
-  | | N | A | B | | Y | Z | M |
+  | | N | A | B | ... | Y | Z | M |
   | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
   | N | | | | | | | |
   | A | | | | | | | |
   | B | | | | | | | |
-  | | | | | | | | |
+  | ... | | | | | | | |
   | Y | | | | | | | |
   | Z | | | | | | | |
   | M | | | | | | | |
