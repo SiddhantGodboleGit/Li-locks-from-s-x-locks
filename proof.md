@@ -24,8 +24,8 @@ Each Lock is an **array of N (No. of operations)(columns in table) basic r/w loc
   | A | 
   | :--: |
   | -/+ |
-  + **A+** : works like basic write with similar unlock
-  + **A-** : obtaining and release of write without issue
+  + **A-** : works like basic write with similar unlock
+  + **A+** : obtaining and release of write without issue
   
 - For two operations
   | | R | W |
