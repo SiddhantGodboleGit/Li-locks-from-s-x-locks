@@ -22,3 +22,8 @@ Each Lock is an **array of N (No. of operations)(columns in table) basic r/w loc
   | - | works like basic exclusive lock with similar unlock |
   | + | obtaining and release of exclusive lock without issue |
   
+- For two operations
+  | | R | W | correctness |
+  | :--: | :--: | :--: | --: |
+  | R | + | - |  |
+  | W | - | - |  |
