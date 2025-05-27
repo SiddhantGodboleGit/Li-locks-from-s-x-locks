@@ -19,4 +19,5 @@ Each Lock is an **array of N (No. of operations)(columns in table) basic r/w loc
 - For single operation
   | A |
   | -- |
-  | - |
+  | - (works like basic exclusive lock)|
+  
