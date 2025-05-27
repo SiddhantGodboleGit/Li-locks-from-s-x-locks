@@ -4,6 +4,8 @@ Each Lock is an **array of N (No. of operations)(columns in table) basic r/w loc
 
 `read`  - `shared lock`
 
+`A-B`   - `operation A before B with - in commutavity`
+
 ### When Locking an item(i) for an operation A
 
    - For every column/operation B in i's array :
@@ -34,4 +36,4 @@ Each Lock is an **array of N (No. of operations)(columns in table) basic r/w loc
   | **R** | + | - | 
   | **W** | - | - |
   + **R+R** : obtaining and release of exclusive lock without issue |
-  + **R-W** : R has read on 
+  + **R-W** : R has read on W so 
