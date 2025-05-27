@@ -44,16 +44,16 @@ Looking at symmetric tables.
   + **W-R** : W has read on R . R has to wait for write
   + **W-W** : W has write on itself
 
-- For any new operation
+- For any new operation (N/M)
   | | N | A | B | ... | Y | Z | M |
   | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
-  | N | | | | | | | |
-  | A | | | | | | | |
-  | B | | | | | | | |
-  | ... | | | | | | | |
-  | Y | | | | | | | |
-  | Z | | | | | | | |
-  | M | | | | | | | |
+  | N | - |   |   |...|   |   |   |
+  | A |   | - |   |...|   |   |   |
+  | B |   |   | - |...|   |   |   |
+  |...|...|...|...|...|...|...|...|
+  | Y |   |   |   |...| + |   |   |
+  | Z |   |   |   |...|   | + |   |
+  | M |   |   |   |...|   |   | + |
   
   + self-commutive go last in array, other on start of array
   + A-A diagonal is always - followed by + giving concurrency.
