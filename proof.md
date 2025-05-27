@@ -19,6 +19,7 @@ Each Lock is an **array of N (No. of operations)(columns in table) basic r/w loc
    - When unlocking the item, just release the locks in the array.
 
 > [!NOTE]
+> - order of operations in table is important.
 > - Have self-commutative operations after all the others.
 > - Array acquisition in ascending while release in decending order of index. 
 > - For non-symmetric table with A-A commutavity an additional fix is required.
@@ -56,5 +57,10 @@ Looking at symmetric tables.
   | M |   |   |   |...|   |   | + |
   
   + self-commutive go last in array, other on start of array
-  + A-A diagonal is always - followed by + giving concurrency.
-  + 
+  + A-A diagonal is always - followed by + giving concurrency
+  + **N+A** : No locks conflict
+  + **M+A** : No locks conflict
+  + **A-N** : A has read on N which N wants write on
+  + **N-A** : N has write on itself which A wants read on
+  + **Z-M** : Z has read on M which M wants write on
+    - but here M has read on Z stopping more Z from executing.
