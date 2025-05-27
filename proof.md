@@ -19,7 +19,7 @@ Each Lock is an **array of N (No. of operations)(columns in table) basic r/w loc
    - When unlocking the item, just release the locks in the array.
 
 > [!NOTE]
-> - Have self-commutative operations after all the others
+> - Have self-commutative operations after all the others.
 > - Array acquisition in ascending while release in decending order of index. 
 > - For non-symmetric table with A-A commutavity an additional fix is required.
 
@@ -32,9 +32,9 @@ Each Lock is an **array of N (No. of operations)(columns in table) basic r/w loc
   + **A+** : obtaining and release of write without issue
   
 - For two operations
-  | | R | W |
+  | | W | R |
   | :--: | :--: | :--: |
-  | **R** | + | - | 
-  | **W** | - | - |
+  | **W** | - | - | 
+  | **R** | - | + |
   + **R+R** : obtaining and release of exclusive lock without issue
-  + **R-W** : R has read on W . W gets read on R but has to wait for write on W
+  + **R-W** : R has read on W . W has to wait for write .
