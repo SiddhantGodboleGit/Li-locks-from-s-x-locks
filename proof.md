@@ -15,3 +15,8 @@ Each Lock is an **array of N (No. of operations)(columns in table) basic r/w loc
 > - Array acquisition in ascending while release in decending order of index. 
 > - For non-symmetric table with A-A commutavity an additional fix is required.
 
+### Proof by Induction
+- For single operation
+  | A |
+  | -- |
+  | - |
