@@ -2,7 +2,10 @@
 Implementing Locks For A Commutativity Table In Layered Locking using exclusive(write) and shared(read) locks.
 ## Overview :
 - Goal is to implement a Lock system for a specific Commutavity table **without a manager or busy-waiting**.
+- The locks will block and operate like the shared and exclusive locks in cpp mutex.
 - Each Lock is an **array of N (No. of operations)(columns in table) basic r/w locks**.
+- Idea is to use the try_lock function on the array.
+
 ### When Locking an item(i) for an operation A
 
    - For every column/operation B in i's array :
