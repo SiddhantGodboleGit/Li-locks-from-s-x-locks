@@ -9,7 +9,7 @@ This is helpful for commutativity-aware concurrency control.
 - Idea is to use the try_lock function on the array.
 - [used lock reference](https://en.cppreference.com/w/cpp/thread/shared_mutex.html)
 
-### When Locking an item(i) for an operation A
+### For an operation A on item(i)
 
    - For every column/operation B in i's array :
      - When A != B
