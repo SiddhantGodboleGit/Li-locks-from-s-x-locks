@@ -33,3 +33,7 @@ This is helpful for commutativity-aware concurrency control.
 
 ## Extra :
 - Without the try lock system the later operations will get lower precedence and would be blocked by the prior operations. This can be useful in some systems with high traffic or with operations having precedences.
+- For a trade-off we can forgo the trylock after few tries and just get locks and hold onto them.
+- Try locks are allowed to spuriously fail; So if this becomes a problem then add more layer of try lock to check again.
+- For ordering operations, a good way can be the number of conflicts.
+- For rows with the same symmetric commutavity just merge them as one. 
