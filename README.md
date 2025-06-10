@@ -30,3 +30,6 @@ This is helpful for commutativity-aware concurrency control.
 > - Have self-commutative operations after all the others.
 > - Array acquisition in ascending while release in decending order of index. 
 > - For non-symmetric table with A-A commutavity an additional fix is required.
+
+## Extra :
+- Without the try lock system the later operations will get lower precedence and would be blocked by the prior operations. This can be useful in some systems with high traffic or with operations having precedences.
