@@ -15,7 +15,9 @@ This is helpful for commutativity-aware concurrency control.
      - When A != B
        - For **-** on B get **Shared** lock on i's B.
        - For **+** on B get **NO** lock on i's B.
-     - When A == B get an **Exclusive** lock on i's A.         
+     - When A == B get an **Exclusive** lock on i's A.
+       - For **+** on A release A **after** acquiring all required locks.
+       - For **-** on A keep **write**.        
 
    - When acquiring the locks follow strict rules of all or nothing.
      - try_lock_shared() / try_lock() on the array in order.
