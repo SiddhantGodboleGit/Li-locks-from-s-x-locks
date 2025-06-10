@@ -15,6 +15,8 @@ Each Lock is an **array of N (No. of operations)(columns in table) basic r/w loc
      - When A == B get a **write** lock on i's A.
        - For **+** on A release A **after** acquiring all required locks.
        - For **-** on A keep **write**.
+
+   - About the try locking, this allows only compatible locks even with the spurious fails.
          
    - When unlocking the item, just release the locks in the array.
 
@@ -22,7 +24,7 @@ Each Lock is an **array of N (No. of operations)(columns in table) basic r/w loc
 > - order of operations in table is important.
 > - Have self-commutative operations after all the others.
 > - Array acquisition in ascending while release in decending order of index. 
-> - For non-symmetric table with A-A commutavity an additional fix is required.
+> - For non-symmetric table with A+A commutavity different behaviour of B with A-B.
 
 ### Proof by Induction
 Looking at symmetric tables.
@@ -63,4 +65,6 @@ Looking at symmetric tables.
   + **A-N** : A has read on N which N wants write on
   + **N-A** : N has write on itself which A wants read on
   + **Z-M** : Z has read on M which M wants write on
-    - but here M has read on Z stopping more Z from executing.
+    - here the try lock system saves us from M stopping imcoming Z.
+
+- So, for any new operation a correct concurrency is maintained.
